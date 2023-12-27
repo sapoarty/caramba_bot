@@ -31,6 +31,7 @@ func main() {
     tokenBot = os.Getenv("carambaBotToken")
     webSite = os.Getenv("carambaBotWebSite")
     chatIDs = loadChatIDs()
+    println("Бот готов к работе")
     go getUpdates() // Горутина для получения обновлений
 
     ticker := time.NewTicker(10 * time.Second)
@@ -146,7 +147,7 @@ func getUpdates() {
                     "/status - Получить текущее состояние нашего корабля.\n" +
                     "/help - Если тебе нужна помощь в море.\n\n" +
                     "С интервалом в 10 секунд я проверяю, не взял ли наш сайт на абордаж какой-нибудь грязный кибер-пират или Кракен.\n" +
-                    "Берегись, и держи руку на шпаге!"
+                    "Берегись, и держи руку на шпаге!",
                 )
                 msg := tgbotapi.NewMessage(chatID, msgText)
                 bot.Send(msg)
