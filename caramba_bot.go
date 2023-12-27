@@ -140,8 +140,7 @@ func getUpdates() {
                 bot.Send(msg)
                 break
 
-            case "start":
-            case "help":
+            case "start","help":
                 msgText := fmt.Sprintf(
                     "Аааррр! Я корсарский бот-сторож, моряк!\n\n" +
                     "/status - Получить текущее состояние нашего корабля.\n" +
